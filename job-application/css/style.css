@@ -5,19 +5,33 @@
 }
 body{
     background-color:rgb(219, 218, 217);
+    text-align: center;
+}
+form{
+    display: inline-block;
+  
 }
 .container 
 {
     max-width: 900px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    display: inline-block;
+    
 }
 .apply_box{
     max-width: 600px;
     padding: 20px;
     background-color: azure;
-    margin: 9 auto;
+    /* margin: 9 auto; */
     margin-top: 50px;
-    box-shadow: 4px 3px 5px rgba(4, 5, 6, 4, 0.1);
+    box-shadow:
+            2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+            6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+            12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+            22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+            41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+            100px 100px 80px rgba(0, 0, 0, 0.07);
+
     border-radius: 10px;
 }
 .form_container
