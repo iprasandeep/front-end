@@ -1,0 +1,45 @@
+body{
+    background-color: aquamarine;
+}
+
+li,em{
+    color: rebeccapurple;
+    background-color: blanchedalmond;
+    
+
+}
+
+h1,p{
+   
+    font-size: 200%;
+    border: 2px solid red;
+   
+}
+
+a:link{
+    color:pink;
+    border: 2px solid black;
+
+}
+a:visited
+{
+    color:green;
+   
+}
+
+a:hover{
+    text-decoration: none;
+
+}
+body{
+    background-image: url("img3.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-attachment: scroll;
+    
+}
+p.one {
+    border-style: solid;
+    border-width: 5px;
+}
