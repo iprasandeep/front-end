@@ -1,45 +1,97 @@
 body{
+    /* font-family: Times; */
+    /* font-variant: small-caps; */
+    font-family: "Solifa, sans-serif";
+}
+.one{
+    border-style: solid;
+    border-width: 5px;
+    border-color: yellow;
+}
+.two
+{
+    border-style: solid;
+    border-width: medium;
+    border-color: red;
+}
+.three
+{
+    border-style: dotted;
+    border-width:2px;
+    border-color: green;
+    border-radius: 5px;
+    margin: 40px;
+}
+
+
+.four 
+{
+    border-style: dotted;
+    border-width: thick;
+    border-radius: 5px;
+
+}
+.name
+{
+    border-left: 6px solid red;
+    border-radius: 5px;
+    margin: auto;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
+}
+
+.one{
+    border:1px solid red;
+    margin-left: 100px;
+}
+p.two{
+    margin-left: inherit;
+}
+/* 
+div{
+    height: 200px;
+    width: 50%;
+    background-color: powderblue;
+}
+.pad{
+    padding: 25px;
+    padding-left: 25%;
+} */
+
+div{
+    width: 300px;
+    /* border: 15px solid green; */
+    padding: 50px;
+    margin: 20px;
     background-color: aquamarine;
-}
+    outline-style: solid;
+    outline-color: yellow;
+    outline-offset: 15px;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-decoration-line: underline;
+    text-decoration-line: overline underline;
+    text-decoration-style: double;
+    text-decoration: none;
+    }
 
-li,em{
-    color: rebeccapurple;
-    background-color: blanchedalmond;
-    
-
-}
-
-h1,p{
-   
-    font-size: 200%;
-    border: 2px solid red;
-   
+.pad
+{
+    vertical-align: baseline;
 }
 
 a:link{
-    color:pink;
-    border: 2px solid black;
-
-}
-a:visited
-{
-    color:green;
-   
-}
-
-a:hover{
+    color: red;
     text-decoration: none;
-
 }
-body{
-    background-image: url("img3.jpg");
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-attachment: fixed;
-    background-attachment: scroll;
-    
+a:visited{
+    color:green;
+    text-decoration: underline;
 }
-p.one {
-    border-style: solid;
-    border-width: 5px;
+a:hover{
+    color:hotpink;
+    text-decoration: underline;
+    background-color: hotpink;
 }
