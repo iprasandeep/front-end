@@ -1,0 +1,65 @@
+*
+{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
+
+.p-box
+
+{
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    margin-top: 20px;
+    position: relative;
+    background-image: url('./img3.jpg');
+    background-position: 100px 200px;
+    background-position: center top;
+}
+
+.p-box h1{
+    position: absolute;
+    top: 40px;
+    left: 200px;
+}
+.p-box h2{
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+}
+
+.fix-me
+{
+    position: fixed;
+    top: 300px;
+}
+button{
+    background-color: azure;
+    border: 1px solid #ccc ;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+/* Pesudo classes */
+
+.mylist li:first-child{
+    background-color: red;
+}
+
+
+.mylist li:last-child
+{
+    background-color: blue;
+}
+
+
+.mylist li:nth-child(5)
+{
+    background-color: yellow;
+}
+.mylist li:nth-child(even)
+{
+    background-color: grey;
+}
