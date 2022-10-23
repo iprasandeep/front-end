@@ -1,20 +1,17 @@
-// import React from 'react';
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import Profile from './Profile';
-import User from './User';
+import User from './User'
+
 
 function App()
 {
-  function getData()
-  {
-    alert("hello from app");
-  }
+  const [name, setName]=React.useState("Prasandeep")
   return (
     <div className='App'>
-      <User data={getData} />
+      <h1>Render Method in React</h1>
+      <User/>
+      {/* <button >Update Name</button> */}
     </div>
-  )
+  );
 }
-
 export default App;
