@@ -1,15 +1,19 @@
 import React from 'react';
 
-export default class Student extends React.Component {
-   
+class Student extends React.Component {
+    componentWillUnmount()
+    {
+        console.log("componentWillUnmount called!");
+    }
     render()
     {
-        console.log(this.props)
         return (
-            <div style={{backgroundColor:"skyblue", margin: 20 }}>
-            <h1>{this.props.name}</h1>
-            <h3>{this.props.email}</h3>
+            <div className='App'>
+                <h1>Student Component Will Unmount</h1>
+               
             </div>
-            )
+        )
     }
 }
+
+export default Student;

@@ -1,31 +1,15 @@
-import React from 'react';
+import './App.css';
+import React, {useState, use} from 'react';
 
-class App extends React.Component {
-
-constructor()
+function App()
 {
-  super();
-  console.log("constructor")
-  this.state={
-    count: 0
-  }
-}
-shouldComponentUpdate()
-{
-  console.log("ShouldComponentUpdate", this.state.count);
-  if(this.state.count > 5 && this.state.count < 10)
-  return true;
-}
-render()
-{
-  console.warn("render")
-  return (
-    <div className='App'>
-      <h1>Should Component Update: {this.state.count}</h1>
-      <button  onClick={()=>{this.setState({count: this.state.count+1})}}>Update Counter</button>
+  
+  const [data, setData] = useState("Prasandeep")
+  return(
+    <div className='App' >
+      <h1>{ data } </h1>
+      <button onClick={()=> setData("Gautam")} > Update Data </button>
     </div>
-    );
-  }
+  )
 }
-
 export default App;
