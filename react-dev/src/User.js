@@ -1,16 +1,15 @@
+import React from 'react'
 import './App.css';
-import React, { useEffect, useState } from 'react';
-
-function App(props)
+function User(props)
 {
-  useEffect(()=>{
-    alert("count. is " + props.count)
-  },[props.count, props.data]);
   return (
-    <div className='App'>
-      <h1>Count Props: {props.count}</h1>
-      <h1>Data Props: {props.data}</h1>
+    <div>
+      <span>{props.data.name}</span>
+      <span>{props.data.mail}</span>
+      <span>{props.data.contact}</span>
+      <button>Hello{props.data.address}</button>
     </div>
-  ); 
+    
+  )
 }
-export default App;
+export default User;
