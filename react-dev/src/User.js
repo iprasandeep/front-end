@@ -1,13 +1,18 @@
-import React from 'react';
+import './App.css';
+import React, {PureComponent} from 'react';
+class User extends PureComponent {
 
-function User(props)
-{
- const data = "Prasandeep Gautam"
-  return  (
-    <>
-      <h2>User Name: </h2>
-      <button onClick={()=>props.alert(data)}>Click Me</button> 
-    </>
-  )
+  render()
+  {
+    console.warn("User Component check re-rendering")
+    return (
+      <div className='App'>
+        <h1>User Component: {this.props.count}</h1>
+        
+      
+      </div>
+    );
+  }
 }
+
 export default User;
