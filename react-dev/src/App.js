@@ -1,22 +1,16 @@
 import './App.css';
-
-import React, {useRef} from 'react';
+import React, {useState}from 'react';
 function App()
 {
-  let inputRef = useRef(null)
-  function handleInput()
-  {
-    console.warn("function testing")
-    inputRef.current.value = "1000";
-    inputRef.current.focus();
-    inputRef.current.style.display="none";
-  }
+  let [val, setVal] = useState("000")
+  let [item, setItem] = useState("")
   return (
     <div className='App'>
-      <h2>useRef in React</h2>
-      <input type='text' ref = {inputRef} />
-      <button onClick={handleInput}>Handle Input</button>
+      <h1>Controlled Component</h1>
+      <input type="text" value={val} defaultValue onChange={(e) =>setVal(e.target.value)}/>    
+    <h3>Value {val} </h3>
+        
     </div>
-  )
+  );
 }
 export default App;

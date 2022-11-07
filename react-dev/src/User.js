@@ -1,18 +1,14 @@
-import './App.css';
-import React, {PureComponent} from 'react';
-class User extends PureComponent {
+import React, {forwardRef} from 'react';
 
-  render()
-  {
-    console.warn("User Component check re-rendering")
-    return (
-      <div className='App'>
-        <h1>User Component: {this.props.count}</h1>
-        
-      
-      </div>
-    );
-  }
+
+function User(props, ref)
+{
+  return (
+    <div>
+      <h2>Input Something: </h2>
+      <input type="text" ref ={ref}/>
+    </div>
+  )
 }
 
-export default User;
+export default forwardRef(User);
