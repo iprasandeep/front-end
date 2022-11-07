@@ -1,16 +1,29 @@
 import './App.css';
-import React, {useState}from 'react';
+import React, { useRef, useState } from 'react';
+
 function App()
 {
-  let [val, setVal] = useState("000")
-  let [item, setItem] = useState("")
   return (
     <div className='App'>
-      <h1>Controlled Component</h1>
-      <input type="text" value={val} defaultValue onChange={(e) =>setVal(e.target.value)}/>    
-    <h3>Value {val} </h3>
-        
+      <h1>HOC</h1>
+      <HOCRed cmp={Counter}/>
     </div>
   );
+  function HOCRed(props)
+  {
+    return <h2 style={{backgroundColor: 'red', width: 100}}><props.cmp/></h2>
+  }
+  function Counter()
+  {
+    const [count, setCount] = useState(0);
+    return  (
+      <div>
+        <h3>{count}</h3>
+        <button onClick={()=> setCount(count+1)}>Update</button>
+      </div>
+
+    )
+  }
 }
+
 export default App;
