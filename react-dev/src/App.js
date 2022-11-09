@@ -1,14 +1,43 @@
-import React from 'react';
-import {Routes, Route } from 'react-router-dom'; 
-import { Home } from './components/Home';
+import './App.css';
+import React, { useEffect, useState } from 'react' ;
+
 function App()
 {
-  return (
-    <Routes>
-      <Route path='/' element={<Home />}>
+  const [data, setData] = useState([])
+  useEffect(() =>{
 
-      </Route>
-    </Routes>
+  fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((result)=>{
+    result.json().then((res)=>{
+      // console.warn("result: ", res);
+      setData(res)
+    })
+  })
+  }, [])
+  console.warn(data)
+  return (
+  <div className="App">
+    <h1>Get API Call</h1>
+    <table border="1">
+      <tr>
+        <td>USER ID</td>
+        <td>ID</td>
+        <td>TITLE</td>
+        <td>COMPLETED</td>
+      </tr>
+      {
+        data.map((item)=> 
+        <tr>
+        <td>{item.userId}</td>
+        <td>{item.id}</td>
+        <td>{item.title} </td>
+        <td>{item.completed}</td>
+      </tr>
+        )
+      }
+    </table>
+  </div>
+
   );
 }
 
